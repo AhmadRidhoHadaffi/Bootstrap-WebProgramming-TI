@@ -1,0 +1,682 @@
+
+    html {
+    scroll-behavior: smooth;
+    } 
+      .topbar {
+        background-color: #40A3DF;
+        padding: 5px 0;
+      }
+
+      /* Navbar utama */
+      .navbar-custom {
+        background-color: #000;
+        padding: 0.5rem 0;
+      }
+
+      /* Menu navbar */
+      .navbar-nav .nav-link {
+        color: #fff !important;
+        font-weight: 600;
+        text-align: center;
+        position: relative;
+        line-height: 1.1;
+        padding: 1.5rem 1.2rem;
+        transition: color 0.3s ease;
+        display: inline-block;
+      }
+
+      /* Subjudul kecil di bawah teks utama */
+      .navbar-nav .nav-link small {
+        display: block;
+        color: #bcbcbc;
+        font-style: italic;
+        font-size: 0.8rem;
+      }
+
+      /* Dropdown style */
+      .dropdown-menu {
+        background-color: #000;
+        border: none;
+        margin-top: 0; 
+        border-radius: 0;
+        display: none; 
+        opacity: 0;
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        transform: translateY(10px);
+      }
+
+      .dropdown-item {
+        color: white;
+        padding: 0.7rem 1.2rem;
+      }
+
+      .dropdown-item:hover {
+        background-color: #111;
+        color: #40A3DF;
+      }
+
+      /* Hilangkan ikon panah default */
+      .navbar .dropdown-toggle::after {
+        display: none !important;
+      }
+
+      /* Logo */
+      .navbar-brand img {
+        height: 60px;
+      }
+
+      /* === GARIS BIRU ANIMASI === */
+      .navbar-nav .nav-link::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 100%;
+        bottom: 6px;
+        height: 3px;
+        background-color: #40A3DF;
+        transition: right 0.3s ease-out;
+      }
+
+      /* Saat hover atau aktif: garis muncul */
+      .navbar-nav .nav-link:hover::after{
+        right: 0;
+      }
+      .navbar-nav .nav-link.active::after {
+        right: 0;
+      }
+
+      /* Teks tetap putih saat hover */
+      .navbar-nav .nav-link:hover {
+        color: #fff !important;
+      }
+
+      /* === Dropdown muncul saat hover === */
+      .nav-item.dropdown:hover .dropdown-menu {
+        display: block;
+        opacity: 1;
+        transform: translateY(0);
+      }
+      @media (max-width: 768px) {
+      .nav-item {
+        padding: 0 15px; /* Kurangi padding di layar kecil */
+       }
+      }
+      /* === HERO SLIDES === */
+      #hero, #hero2, #hero3 {
+        height: 100vh;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+      }
+
+      #hero {
+        background-image: url('https://ti.pnp.ac.id/wp-content/uploads/2022/01/5039684-2048x1365.jpg'); 
+      }
+
+      #hero2 {
+        background-image: url('https://ti.pnp.ac.id/wp-content/uploads/2022/01/ABSTRACT_BACKGROUND_01-scaled.jpg');
+      }
+
+      #hero3 {
+        background-image: url('C:Collage/SEMESTER 3/Pemograman Web/File/Foto/Background5.jpg');
+      }
+
+      #hero::before, #hero2::before, #hero3::before{
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.45);
+        z-index: 0;
+      }
+
+      .hero-content {
+        position: relative;
+        z-index: 1;
+      }
+
+      /* === ANIMASI TEKS === */
+      @keyframes fadeInUp {
+        0% {
+          opacity: 0;
+          transform: translateY(-40px);
+          filter: blur(5px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+          filter: blur(0);
+        }
+      }
+
+      .animate-text {
+        opacity: 0;
+        animation: fadeInUp 1s ease forwards;
+      }
+
+      .delay-1 { animation-delay: 0.3s; }
+      .delay-2 { animation-delay: 0.9s; }
+      .delay-3 { animation-delay: 1.5s; }
+      .delay-4 { animation-delay: 2.1s; }
+
+      /* === PROGRESS BAR === */
+      .carousel-progress {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 6px;
+        background: rgba(255,255,255,0.1);
+        overflow: hidden;
+        z-index: 10;
+      }
+
+      .carousel-progress-bar {
+        height: 100%;
+        background-color: white;
+        width: 0%;
+      }
+
+      /* === Transisi antar slide === */
+      .carousel-fade .carousel-item {
+        transition: opacity 1s ease-in-out;
+      }
+
+      
+
+      /* Warna tombol Bootstrap override */
+      .btn-primary {
+        background-color: #40A3DF;
+        border-color: #40A3DF;
+        transition: background-color 0.3s ease;
+      }
+
+      .btn-primary:hover {
+        background-color: #2d8ac8;
+        border-color: #2d8ac8;
+      }
+
+      /* Warna teks */
+      #hero h1, #hero h3, #hero p {
+        color: #fff;
+      }
+      .pmb-section {
+        background-color: #03a9f4; /* warna biru cerah */
+        color: #000;
+      }
+
+      .pmb-section h4, 
+      .pmb-section p {
+        color: #111;
+      }
+
+      .pmb-section .btn {
+        border-radius: 8px;
+        transition: all 0.3s ease;
+      }
+
+      .pmb-section .btn:hover {
+        background-color: #0288d1;
+        color: #fff;
+      }
+      /* ==== Bagian Selamat Datang ==== */
+      .welcome-section h3 {
+        font-size: 1.8rem;
+      }
+
+      /* Garis kecil di bawah judul */
+      .underline {
+        width: 80px;
+        height: 4px;
+        background-color: #03a9f4;
+        border-radius: 2px;
+      }
+
+      /* Garis kecil di bawah setiap menu */
+      .line {
+        width: 50px;
+        height: 4px;
+        background-color: #03a9f4;
+        border-radius: 2px;
+      }
+
+      /* Style dasar card */
+      .info-card {
+        background-color: #fff;
+        border-radius: 15px;
+        text-align: center;
+        transition: all 0.3s ease;
+        border: 1px solid #eaeaea;
+        box-shadow: 0 0 0 rgba(0, 0, 0, 0.08);
+        height: 100%;
+      }
+
+      /* Hover effect */
+      .info-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+        border-color: #03a9f4;
+      }
+
+      /* Ikon */
+      .info-icon i {
+        font-size: 3rem;
+        color: #03a9f4;
+        transition: transform 0.3s ease, color 0.3s ease;
+      }
+
+      /* Ikon membesar saat hover */
+      .info-card:hover .info-icon i {
+        transform: scale(1.15);
+        
+      }
+
+      /* Teks paragraf */
+      .info-card p {
+        color: #555;
+        font-size: 0.95rem;
+      }
+      .info-section-2 .info-card {
+        background: #fff;
+        border-radius: 15px;
+        text-align: center;
+        padding: 25px 15px;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+        height: 230px;
+      }
+
+      .info-section-2 .info-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+      }
+
+      /* Ukuran ikon */
+      .info-section-2 .info-icon i {
+        font-size: 2.5rem;
+        color: orange;
+      }
+
+      /* Kotak pertama & terakhir lebih panjang ke bawah */
+      .info-section-2 .special-card {
+        height: 270px;
+      }
+
+      /* Kotak lainnya sedikit lebih pendek */
+      .info-section-2 .small-card {
+        height: 230px;
+      }
+
+      /* Supaya sejajar di atas */
+      .info-section-2 .row {
+        align-items: flex-start !important;
+      }
+      @media (max-width: 992px) {
+        .info-card {
+          height: auto;
+        }
+      }
+
+/* CSS KUSTOM UNTUK BERITA TERBARU */
+.news-section {
+    padding: 20px 0 60px 0;
+}
+.news-header {
+    text-align: center;
+    padding-bottom: 30px;
+}
+.news-header h2 {
+    font-weight: 800; 
+    font-size: 2rem;
+    color: #343a40;
+    border-bottom: 3px solid #007BFF; 
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+}
+
+/* Gaya untuk Kartu Berita dengan Overlay */
+.news-card-item {
+    position: relative; 
+    height: 250px;
+    overflow: hidden; 
+    border-radius: 8px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+.news-card-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    transition: transform 0.5s ease;
+}
+.news-card-item:hover img {
+    transform: scale(1.05);
+}
+
+/* Overlay Gelap (Gradien) */
+.news-card-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Gradien untuk menggelapkan bagian bawah gambar */
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 50%);
+    z-index: 1;
+    border-radius: 8px;
+}
+
+/* Konten Teks Putih */
+.news-content-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 20px;
+    color: white; 
+    z-index: 2; 
+}
+.news-content-overlay .category {
+    font-size: 0.75rem;
+    font-weight: bold;
+    background-color: #dc3545; 
+    padding: 2px 6px;
+    border-radius: 3px;
+    display: inline-block;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+.news-content-overlay h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    line-height: 1.3;
+}
+.news-content-overlay .meta {
+    font-size: 0.75rem;
+    opacity: 0.9;
+}
+.counter-section {
+    position: relative;
+    padding: 60px 0; 
+    color: white;
+    z-index: 1;
+    overflow: hidden;
+}
+.counter-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; 
+    background-image: url('https://ti.pnp.ac.id/wp-content/uploads/2022/01/5039684-2048x1365.jpg'); 
+    background-size: cover;
+    background-position: center;
+    
+    /* Optional: Tambahkan overlay gelap ke background image */
+    background-color: rgba(0, 0, 0, 0.4); 
+    background-blend-mode: multiply;
+}
+.counter-item {
+    margin-bottom: 20px;
+}
+.count-number {
+    font-size: 5rem; 
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 5px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5); 
+}
+.count-label {
+    font-size: 20px;
+    font-weight: 300;
+    opacity: 0.9;
+    font-weight: bold;
+}
+
+
+/* CSS untuk Bagian Mitra Kami */
+.mitra-section {
+    padding: 50px 0 80px 0;
+    text-align: center;
+}
+.mitra-header h2 {
+    font-weight: bold;
+    font-size: 2rem;
+    color: #343a40;
+    margin-bottom: 5px;
+}
+.logo-item {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.logo-item img {
+    max-height: 40px; 
+    width: auto;
+    max-width: 100%;
+}
+
+/* CSS KUSTOM UNTUK PENGUMUMAN & PRESTASI (Background Gelap) */
+.info-section {
+    background-color: #00796b; 
+    padding: 60px 0;
+}
+.dark-card {
+    background-color: #212529; 
+    color: white;
+    padding: 30px;
+    border-radius: 25px;
+    margin-bottom: 30px;
+}
+.dark-card h2 {
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: white;
+    margin-bottom: 5px;
+}
+
+/* Gaya untuk Thumbnail di dalam Card */
+.thumbnail-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+}
+.thumbnail-item {
+    position: relative;
+    width: 48%; 
+    overflow: hidden;
+    border-radius: 5px;
+    height: 300px;
+}
+.thumbnail-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Overlay Gelap di Thumbnail (untuk teks terbaca) */
+.thumbnail-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 60%);
+    z-index: 1;
+}
+
+/* Teks Overlay Thumbnail */
+.thumbnail-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 10px;
+    color: white;
+    z-index: 2;
+    font-size: 0.8rem;
+}
+.thumbnail-text h5 {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 3px;
+    line-height: 1.2;
+}
+.thumbnail-text .date {
+    font-size: 0.7rem;
+    opacity: 0.8;
+}
+
+/* Tombol Biru-Ungu Kustom */
+.btn-custom {
+    background-color: #6a5acd;
+    border-color: #6a5acd;
+    color: white;
+    padding: 10px 25px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+.btn-custom:hover {
+    background-color: #7d69e8;
+    border-color: #7d69e8;
+    color: white;
+}
+
+/* CSS KUSTOM UNTUK FOOTER */
+.main-footer {
+    background-color: #171717; 
+    color: #f1f1f1; 
+    padding: 40px 0 20px 0;
+    font-size: 0.9rem;
+}
+
+.footer-logo img {
+    max-width: 150px;
+    margin-bottom: 15px;
+}
+
+.footer-title {
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.footer-link-list {
+    list-style: none;
+    padding: 0;
+}
+.footer-link-list li {
+    margin-bottom: 8px;
+}
+.footer-link-list a {
+    color: #f1f1f1;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+.footer-link-list a:hover {
+    color: #007BFF; /* Warna biru saat hover */
+    text-decoration: underline;
+}
+.footer-link-list i {
+    margin-right: 8px;
+    font-size: 0.7rem;
+    color: #007BFF;
+}
+
+/* Gaya untuk Bagian Follow us (Ikon Sosial Media) */
+.social-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin-right: 10px;
+    color: white;
+    font-size: 1.1rem;
+    transition: opacity 0.3s;
+}
+.social-icons a:hover {
+    opacity: 0.8;
+}
+.social-icons .facebook { background-color: #3b5998; }
+.social-icons .youtube { background-color: #ff0000; }
+.social-icons .instagram { background-color: #c32aa3; }
+
+/* Gaya untuk Garis Pemisah (TOP) dan Copyright */
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+    margin-top: 30px;
+    text-align: center;
+}
+.footer-bottom .copyright {
+    font-size: 0.8rem;
+}
+.footer-bottom .btn-top {
+    background-color: #007BFF;
+    color: white;
+    border-radius: 5px;
+    padding: 5px 10px;
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+/* CSS untuk Fixed Button (Tombol Telepon dan Scroll-to-Top) */
+.fixed-action-btn {
+    position: fixed;
+    right: 20px; 
+    bottom: 20px; 
+    z-index: 1030; 
+}
+
+/* Gaya Tombol Telepon (Paling Bawah) */
+.btn-contact-call {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: #38b448; /* Hijau cerah */
+    color: white;
+    font-size: 1.2rem;
+    text-decoration: none;
+    margin-top: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+    /* Efek garis putih melingkar seperti di gambar (opsional) */
+    border: 1px solid rgba(255, 255, 255, 0.6); 
+}
+.btn-contact-call:hover {
+    background-color: #2e9b3a;
+    color: white;
+}
+
+/* Gaya Tombol Scroll-to-Top (Di Atas Tombol Telepon) */
+.btn-scroll-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: #007BFF; /* Biru */
+    color: white;
+    font-size: 1.2rem;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+.btn-scroll-top:hover {
+    background-color: #0056b3;
+    color: white;
+}
